@@ -1,3 +1,12 @@
+
+import FlightsBooking from "../../components/flight/flight-booking/flight-booking";
+import FlightsHeader from "../../components/flight/flights-header";
+
 export default function FlightsPage() {
-  return <h1>flights page</h1>;
+  return (
+    <>
+      <FlightsHeader />
+      <FlightsBooking />
+    </>
+  );
 }

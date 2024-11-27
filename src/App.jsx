@@ -1,9 +1,4 @@
-import {
-  createBrowserRouter,
-  // createRoutesFromElements,
-  // Route,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/root";
 import { CssBaseline } from "@mui/material";
 import FlightsPage from "./pages/flights/flights";

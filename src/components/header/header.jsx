@@ -14,8 +14,8 @@ export default function Header() {
 
   return (
     <AppBar
-      position="static"
-      sx={{ backgroundColor: "transparent", p: "12px" }}
+      position="fixed"
+      sx={{ backgroundColor: "white", p: "12px", zIndex: 1300 }}
     >
       <Toolbar className={""}>
         <Box display={"flex"} gap={10}>
