@@ -42,16 +42,19 @@ export default function FlightDeparture() {
         options={nearByAirports}
         value={selectedAirport}
         onChange={handleSelectionChange}
+        sx={{
+          width: { xs: "100%", sm: "200px", md: "300px" },
+        }}
         renderInput={(params) => (
           <TextField
             {...params}
             placeholder={"Departure Location"}
             sx={{
+              display: "flex",
               "& .MuiInputBase-root": {
                 height: "100%",
-                width: "300px",
 
-                fontSize: { xs: "12px", sm: "32px" },
+                fontSize: { xs: "12px", sm: "24px" },
               },
               "& .MuiSvgIcon-root": {
                 fontSize: "20px",

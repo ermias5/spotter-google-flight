@@ -7,8 +7,9 @@ export default function FlightsHeader() {
         <img
           src="https://www.gstatic.com/travel-frontend/animation/hero/flights_nc_4.svg"
           alt="image"
+          width={"100%"}
         />
-        <Typography variant="h2">Flights</Typography>
+        <Typography fontSize={{ xs: "30px", sm: "60px" }}>Flights</Typography>
       </Box>
     </>
   );
