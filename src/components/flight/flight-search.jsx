@@ -20,6 +20,7 @@ export default function FlightSearch() {
         backgroundColor: "#fff",
         mx: "auto",
         mt: "50px",
+        mb: "300px",
         pb: "70px",
       }}
     >
@@ -52,8 +53,8 @@ export default function FlightSearch() {
         color="primary"
         sx={{
           position: "absolute",
-          top: "200px",
-          left: "500px",
+          top: "85%",
+          left: { xs: "30%", sm: "50%" },
           borderRadius: "30px",
           px: "32px",
           minWidth: "56px",

@@ -7,13 +7,14 @@ import { Box, Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 
 const navigationLinks = [
+  { name: "Flights", path: "/", icon: <FlightIcon /> },
   {
     name: "Travel",
-    path: "/",
+    path: "/travel",
     icon: <CardTravelIcon />,
   },
   { name: "Explore", path: "/explore", icon: <TravelExploreIcon /> },
-  { name: "Flights", path: "/flights", icon: <FlightIcon /> },
+
   { name: "Hotels", path: "/hotels", icon: <HotelIcon /> },
   { name: "Holiday rentals", path: "/holiday", icon: <HouseIcon /> },
 ];
