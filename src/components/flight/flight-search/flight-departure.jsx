@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Autocomplete, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import { getNearByAirports } from "../../../api";
 
-export default function FlightDeparture() {
+export default function FlightDeparture({ onChange }) {
   const [nearByAirports, setNearByAirports] = useState([]);
   const [selectedAirport, setSelectedAirport] = useState(null);
 
@@ -13,11 +14,11 @@ export default function FlightDeparture() {
 
         const formattedCurrentAirport = {
           label: `${current.presentation.title} (${current.navigation.relevantFlightParams.skyId})`,
-          value: current.navigation.relevantFlightParams.skyId,
+          value: current.navigation.entityId,
         };
         const formattedNearbyAirports = nearby.map((airport) => ({
           label: `${airport.presentation.title} (${airport.navigation.relevantFlightParams.skyId})`,
-          value: airport.navigation.relevantFlightParams.skyId,
+          value: airport.navigation.entityId,
         }));
         setSelectedAirport(formattedCurrentAirport);
         const allAirports = [
@@ -33,7 +34,9 @@ export default function FlightDeparture() {
 
   const handleSelectionChange = (event, newValue) => {
     setSelectedAirport(newValue);
-    console.log("Selected airport:", newValue);
+    if (onChange) {
+      onChange(newValue); // Notify parent about the change
+    }
   };
 
   return (

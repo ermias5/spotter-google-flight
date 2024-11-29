@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Autocomplete, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import { searchAirports } from "../../../api";
 
-export default function FlightDestination() {
+export default function FlightDestination({ onChange }) {
   const [airports, setAirports] = useState([]);
   const [selectedAirport, setSelectedAirport] = useState(null);
 
@@ -21,6 +22,9 @@ export default function FlightDestination() {
 
   const handleSelectionChange = (event, newValue) => {
     setSelectedAirport(newValue);
+    if (onChange) {
+      onChange(newValue);
+    }
   };
 
   return (
